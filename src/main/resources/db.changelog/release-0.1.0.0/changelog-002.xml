@@ -1,0 +1,14 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+    <changeSet author="Валерий" id="DropUniqueBankDetailsConstraint">
+        <dropUniqueConstraint constraintName="account_details_bank_details_id_key"
+                tableName="account_details"
+                              schemaName="account"
+                              uniqueColumns="bank_details_id"/>
+    </changeSet>
+</databaseChangeLog>
